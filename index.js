@@ -19,9 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
+let votingAge = 17
+if (votingAge >=18){
+  return "True"
+}
 /*
 Task 1b - Values
 
@@ -33,9 +34,13 @@ Do the following:
    HINT: no function required
 */
 
-
-
-
+var circle = 5
+var triangle = 6
+if (circle === triangle) {
+  return "True"
+} else if (circle === 6) {
+  return "True"
+}
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -48,7 +53,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+parseInt("1999");{
+  return "1999"
+}
 
 
 /*
@@ -60,8 +67,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a*b
 }
 
 
@@ -76,8 +83,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(ageValue){
+  return ageValue * 7
 }
 
 
@@ -217,8 +224,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+if (score >= 90){
+  return "you got an A"
+}else if (score >= 80){
+  return "you got a B"
+}else if (score >= 70){
+  return "you got a C"
+}else if (score >= 60){
+  return "you got a D"
+}else if (score < 59){
+  return "you got a F"
+}
 }
 
 
@@ -260,3 +277,4 @@ module.exports = {
   annoyingSong,
   grade
 }
+
