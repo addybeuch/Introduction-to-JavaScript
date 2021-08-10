@@ -84,8 +84,9 @@ Do the following:
 */
 
 function dogYears(ageValue){
-  return ageValue * 7
+  return ageValue * 7;
 }
+console.log (dogYears(6))
 
 
 
@@ -133,6 +134,7 @@ function hungryDog(weight, age){
     return weight * 0.1;
   }
 }
+console.log (hungryDog(15, 1))
 
 
 
@@ -157,9 +159,39 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computerMove = Math.random();
+
 function game(user, computer){
-  /*add your code here*/
+  if(computer <= .33){
+    computer = "rock"
+  }else if (computer <= .66){
+    computer = "scissors"
+  }else{computer = "paper"}
 }
+if(user === computer){
+  return "theres a tie"
+}
+if(user === "rock" && computer === "scissors"){
+  return "you win!";
+}
+if(user === "paper" && computer === "rock"){
+  return "you win!";
+}
+if(user === "scissors" && computer === "paper"){
+  return "you win!";
+}
+if(computer === "rock" && user === "scissors"){
+  return "you lose!";
+}
+if(computer === "paper" && user === "rock"){
+  return "you lose!";
+}
+if(computer === "scissors" && user === "paper"){
+  return "you lose!";
+}
+
+console.log(game("scissors",computerMove))
+
 
 
 
@@ -174,10 +206,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km / 1.609
 }
-
+console.log (miles(150))
 
 
 //Task 5b - Feet to CM
@@ -188,9 +220,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
+console.log (feet(150))
 
 
 
@@ -204,9 +237,11 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong(songCount){
+        return `${songCount} bottles of soda on the wall, ${songCount} bottles of soda, take one down pass it around ${songCount - 1} bottles of soda on the wall`
+      }
+  
+    console.log(annoyingSong(25))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -238,6 +273,7 @@ if (score >= 90){
 }
 }
 
+console.log(grade(40))
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
