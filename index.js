@@ -21,8 +21,9 @@ Do the following:
 */
 let votingAge = 17
 if (votingAge >=18){
-  return "True"
+  console.log(true) 
 }
+
 /*
 Task 1b - Values
 
@@ -37,9 +38,9 @@ Do the following:
 var circle = 5
 var triangle = 6
 if (circle === triangle) {
-  return "True"
+  console.log(true)
 } else if (circle === 6) {
-  return "True"
+  console.log(true)
 }
 
 /*
@@ -53,10 +54,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-parseInt("1999");{
-  return "1999"
-}
-
+let year = parseInt("1999") 
+console.log(year)
 
 /*
 Task 1d - Multiply
@@ -161,33 +160,36 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 
 let computerMove = Math.random();
 
+
+if(computerMove <= .33){
+  computerMove = "rock"
+}else if (computerMove <= .66){
+  computerMove = "scissors"
+}else{computerMove = "paper"}
+
 function game(user, computer){
-  if(computer <= .33){
-    computer = "rock"
-  }else if (computer <= .66){
-    computer = "scissors"
-  }else{computer = "paper"}
-}
-if(user === computer){
-  return "theres a tie"
-}
-if(user === "rock" && computer === "scissors"){
-  return "you win!";
-}
-if(user === "paper" && computer === "rock"){
-  return "you win!";
-}
-if(user === "scissors" && computer === "paper"){
-  return "you win!";
-}
-if(computer === "rock" && user === "scissors"){
-  return "you lose!";
-}
-if(computer === "paper" && user === "rock"){
-  return "you lose!";
-}
-if(computer === "scissors" && user === "paper"){
-  return "you lose!";
+
+  if(user === computer){
+    return "it's a tie"
+  }
+  if(user === "rock" && computer === "scissors"){
+    return "you win!";
+  }
+  if(user === "paper" && computer === "rock"){
+    return "you win!";
+  }
+  if(user === "scissors" && computer === "paper"){
+    return "you win!";
+  }
+  if(computer === "rock" && user === "scissors"){
+    return "you lose!";
+  }
+  if(computer === "paper" && user === "rock"){
+    return "you lose!";
+  }
+  if(computer === "scissors" && user === "paper"){
+    return "you lose!";
+  }
 }
 
 console.log(game("scissors",computerMove))
@@ -207,7 +209,8 @@ Using the miles function below do the following:
 */
 
 function miles(km){
-  return km / 1.609
+  var miles = km*0.621371
+  return miles
 }
 console.log (miles(150))
 
@@ -268,8 +271,8 @@ if (score >= 90){
   return "you got a C"
 }else if (score >= 60){
   return "you got a D"
-}else if (score < 59){
-  return "you got a F"
+}else if (score <= 59){
+  return "you got an F"
 }
 }
 
